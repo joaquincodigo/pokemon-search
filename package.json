@@ -1,6 +1,6 @@
 {
   "name": "pokemon-search",
-  "homepage": "https://joaquincodigo.github.io/portfolio/hello-deploy-world",
+  "homepage": "https://joaquincodigo.github.io/pokemon-search",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

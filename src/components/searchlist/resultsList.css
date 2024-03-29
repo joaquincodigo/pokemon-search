@@ -1,0 +1,46 @@
+.results-list {
+	height: 609px;
+	background-color: darkcyan;
+}
+
+img {
+	width: 30px;
+	height: 30px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 23px;
+	margin: 0px;
+	background-color: darkseagreen;
+}
+
+.result {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid black;
+	padding-bottom: 12px;
+}
+
+.result > img {
+	height: 68px;
+	height: 68px;
+	min-width: 68px;
+	background-color: blueviolet;
+}
+
+p {
+	margin: 0px;
+	margin-left: 23px;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-size: larger;
+}
+
+.description {
+	font-size: large;
+}

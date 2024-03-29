@@ -1,0 +1,43 @@
+.search-bar {
+	padding: 20px;
+	display: flex;
+	background-color: paleturquoise;
+	height: 109px;
+	box-sizing: border-box;
+}
+
+#name {
+	margin-right: 23px;
+	border-radius: 15px;
+	width: 320px;
+	height: 68px;
+	font-size: larger;
+}
+
+input[type="text"] {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.type-container {
+	width: 200px;
+	display: flex;
+	flex-direction: row;
+}
+
+#type {
+	border-radius: 15px;
+	width: 145px;
+	height: 68px;
+	font-size: large;
+}
+
+.type-image-container {
+	width: 68px;
+	height: 68px;
+}
+
+#type-image {
+	width: 68px;
+	height: 68px;
+}
