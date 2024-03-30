@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import PokemonSearch from './PokemonSearch'
+import PokemonSearch from './components/pokemonsearch/PokemonSearch'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

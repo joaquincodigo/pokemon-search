@@ -1,6 +1,6 @@
 import React from 'react';
 import './card.css'
-import dummyImage from './dummy-image.png'
+import dummyImage from '../../images/dummy-image.png'
 
 function Card() {
 	return (
