@@ -1,6 +1,7 @@
-.results-list {
+.resultsList {
 	height: 609px;
 	background-color: darkcyan;
+	overflow: auto;
 }
 
 img {
@@ -22,7 +23,7 @@ ul {
 	padding-bottom: 12px;
 }
 
-.result > img {
+.result>img {
 	height: 68px;
 	height: 68px;
 	min-width: 68px;

@@ -3,13 +3,14 @@ import './resultsList.css'
 import '../searchresult/SearchResult'
 import SearchResult from '../searchresult/SearchResult';
 
-function ResultsList({ results }) {
+function ResultsList({ results, handleMouseEnter }) {
 	return (
-		<div className="results-list">
+		<div className="resultsList">
+
 			<ul>
 				{results.map((result, index) => (
 					<li key={index}>
-						<SearchResult result={result} />
+						<SearchResult result={result} handleMouseEnter={handleMouseEnter} />
 					</li>
 				))}
 			</ul>

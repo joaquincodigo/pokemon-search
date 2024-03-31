@@ -81,6 +81,7 @@ function PokemonSearch() {
 
   }
 
+  const handleMouseEnter = (event) => { console.log(event.target.innerText) }
 
   return (
     <div className="container">
@@ -91,7 +92,7 @@ function PokemonSearch() {
 
       <div className="search-container">
         <SearchBar onNameInputChange={handleNameInputChange} />
-        <ResultsList results={searchResults} />
+        <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
       </div>
 
     </div>
