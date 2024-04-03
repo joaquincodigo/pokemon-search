@@ -1,23 +1,20 @@
 .search-bar {
-	padding: 20px;
 	display: flex;
+	height: 60px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 15px;
 	background-color: paleturquoise;
-	height: 109px;
-	box-sizing: border-box;
 }
 
-#name {
-	margin-right: 23px;
-	border-radius: 15px;
-	width: 320px;
-	height: 68px;
-	font-size: larger;
+#name-input {
+	flex-grow: 2;
 }
 
-input[type="text"] {
-	padding: 10px;
-	box-sizing: border-box;
+#type-input {
+	flex-grow: 1;
 }
+
 
 .type-container {
 	width: 200px;

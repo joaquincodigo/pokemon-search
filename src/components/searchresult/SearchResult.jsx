@@ -8,11 +8,11 @@ function SearchResult({ result, handleMouseEnter }) {
 
 		<div className="searchResult" onMouseEnter={(event) => handleMouseEnter(event, result)}>
 
-			<img className='resultImage' src={dummyImage} />
+			<img className='resultImage' src={result.sprites.front_default} />
 
 			<div className="resultText">
 				<p className='resultName'>{result.name}</p>
-				<p className='resultType'>{result.type}</p>
+				<p className='resultType'>{result.types[0].type.name}</p>
 				<p className='resultDescription'>{result.description}</p>
 			</div>
 
