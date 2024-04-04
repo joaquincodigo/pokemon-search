@@ -8,34 +8,22 @@
 	background-color: paleturquoise;
 }
 
-#name-input {
-	flex-grow: 2;
+/* ---------------------- */
+
+/* Name Input  */
+.name-input-container {
+	background-color: teal;
 }
 
-#type-input {
-	flex-grow: 1;
+#name-input {}
+
+/* ---------------------- */
+
+/* Type  Input  */
+.type-input-container {
+	background-color: teal;
 }
 
+#type-input {}
 
-.type-container {
-	width: 200px;
-	display: flex;
-	flex-direction: row;
-}
-
-#type {
-	border-radius: 15px;
-	width: 145px;
-	height: 68px;
-	font-size: large;
-}
-
-.type-image-container {
-	width: 68px;
-	height: 68px;
-}
-
-#type-image {
-	width: 68px;
-	height: 68px;
-}
+/* ---------------------- */

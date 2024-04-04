@@ -7,8 +7,14 @@ function SearchBar({ onNameInputChange }) {
 		<div className="search-bar">
 			<form action="">
 
-				<input onInput={onNameInputChange} type="text" name="name" id="name-input" placeholder='Enter the Pokemon name' />
-				<input type="text" name="type" id="type-input" placeholder='Type Symbol' />
+				<div className="name-input-container">
+					<input onInput={onNameInputChange} type="text" name="name" id="name-input" placeholder='Enter the Pokemon name' />
+				</div>
+
+				<div className="type-input-container">
+					<input type="text" name="type" id="type-input" placeholder='Type Symbol' />
+				</div>
+
 				<img src={dummyImage} id="type-image" />
 
 			</form >
