@@ -2,28 +2,76 @@
 	display: flex;
 	flex-direction: row;
 	height: 60px;
-	width: 100%;
-	box-sizing: border-box;
+	width: 320px;
 	padding: 15px;
+	box-sizing: border-box;
 	background-color: paleturquoise;
 }
 
-/* ---------------------- */
 
-/* Name Input  */
+/* Form -------------------- */
+form {
+	display: flex;
+	width: 320px;
+	height: 30px;
+}
+
+/* ------------------------- */
+
+
+/* Name Input -------------- */
 .name-input-container {
-	background-color: teal;
+	width: 150px;
+	height: 30px;
+	display: inline-block;
 }
 
-#name-input {}
+#name-input {
+	display: inline-block;
+	width: 135px;
+	margin-right: 15px;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-radius: 5px;
+}
 
-/* ---------------------- */
+input[type="text"]::placeholder {
+	padding-left: 8px;
+	color: lightgray;
+}
 
-/* Type  Input  */
+/* ------------------------- */
+
+
+/* Type Input -------------- */
 .type-input-container {
-	background-color: teal;
+	width: 110px;
+	height: 30px;
+	display: inline-block;
 }
 
-#type-input {}
+#type-input {
+	display: inline-block;
+	width: 110px;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-radius: 5px;
+}
 
-/* ---------------------- */
+.type-input-image-container {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.type-input-image {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+/* ------------------------- */

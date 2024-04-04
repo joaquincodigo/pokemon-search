@@ -10,7 +10,7 @@ function SearchResult({ result, handleMouseEnter }) {
 
 			<img className='resultImage' src={result.sprites.front_default} />
 
-			<div className="resultText">
+			<div className="resultTextContainer">
 				<p className='resultName'>{result.name}</p>
 				<p className='resultType'>{result.types[0].type.name}</p>
 				<p className='resultDescription'>{result.description}</p>

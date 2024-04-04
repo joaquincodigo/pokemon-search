@@ -77,7 +77,7 @@ function PokemonSearch() {
 
       <div className="search-container">
         <SearchBar onNameInputChange={handleNameInputChange} />
-        {/* <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} /> */}
+        <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
       </div>
 
     </div>
