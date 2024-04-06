@@ -13,9 +13,20 @@ function SearchResult({ result, handleMouseEnter }) {
 			<div className="result-text-container">
 				<p className='result-name'>{result.name}</p>
 				<div className="types-container">
-					<p className='result-type'>{result.types[0].type.name}</p>
+					{
+						result.types.map(
+							(type) => {
+								console.log("This is: ", type)
+								return (
+									<div>
+										<p className='result-type'>{type.type.name}</p>
+									</div>
+								)
+							}
+						)
+					}
+					{/* <p className='result-type'>{result.types[0].type.name}</p> */}
 				</div>
-				<p className='result-description'>{result.description}</p>
 			</div>
 
 		</div>
