@@ -72,7 +72,7 @@ function PokemonSearch() {
     <div className="container">
 
       <div className="card-container">
-        {/* <Card result={selectedPokemon} /> */}
+        <Card result={selectedPokemon} />
       </div>
 
       <div className="search-container">
