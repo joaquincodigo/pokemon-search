@@ -16,7 +16,6 @@ function SearchResult({ result, handleMouseEnter }) {
 					{
 						result.types.map(
 							(type) => {
-								console.log("This is: ", type)
 								return (
 									<div>
 										<p className='result-type'>{type.type.name}</p>

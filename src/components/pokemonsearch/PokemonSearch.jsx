@@ -10,7 +10,7 @@ function PokemonSearch() {
 
   const [entirePokemonList, setEntirePokemonList] = useState([])
   const [searchResults, setSearchResults] = useState([])
-  const [selectedPokemon, setSelectedPokemon] = useState(entirePokemonList[1])
+  const [selectedPokemon, setSelectedPokemon] = useState()
 
   const handleNameInputChange = (event) => {
     const inputValue = event.target.value.toLowerCase()
@@ -31,7 +31,8 @@ function PokemonSearch() {
 
   const handleMouseEnter = (event, result) => {
     setSelectedPokemon({ ...result });
-
+    console.log("From HandleMouseEnter:");
+    console.log("Selected Pokemon: ", selectedPokemon)
   }
 
   useEffect(() => {
@@ -59,10 +60,9 @@ function PokemonSearch() {
       const pokemonData = await Promise.all(pokemonDataPromises)
       setEntirePokemonList(pokemonData)
       setSearchResults(pokemonData)
+      console.log("SearchResults fetched:", pokemonData[0])
+      setSelectedPokemon(pokemonData[0])
 
-      // pokemonData.forEach((el) => {
-      //   console.log(el.sprites.front_default)
-      // })
     }
 
     fetchPokemonData()
@@ -72,7 +72,7 @@ function PokemonSearch() {
     <div className="container">
 
       <div className="card-container">
-        <Card result={selectedPokemon} />
+        <Card selectedPokemon={selectedPokemon} />
       </div>
 
       <div className="search-container">
