@@ -13,6 +13,7 @@
 	padding: 0px;
 	margin: 0px;
 	font-size: 18px;
+	text-transform: capitalize;
 }
 
 .card-image {
@@ -29,6 +30,7 @@
 	overflow: scroll;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	height: 130px;
 }
 
 .card-description::-webkit-scrollbar {

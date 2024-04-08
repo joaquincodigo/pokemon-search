@@ -31,14 +31,13 @@ function PokemonSearch() {
 
   const handleMouseEnter = (event, result) => {
     setSelectedPokemon({ ...result });
-    console.log("From HandleMouseEnter:");
-    console.log("Selected Pokemon: ", selectedPokemon)
   }
+
 
   useEffect(() => {
     // Top level fetch
     async function fetchPokemonData() {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=10"
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
       const res = await fetch(url)
       const JSONData = await res.json()
 
@@ -52,6 +51,18 @@ function PokemonSearch() {
         async (url) => {
           const pokemonRes = await fetch(url)
           const pokemonJSON = await pokemonRes.json()
+
+          // Fetching species data for flavor text
+          const speciesRes = await fetch(pokemonJSON.species.url)
+          const speciesJSON = await speciesRes.json()
+
+          // Extracting flavor text
+          const flavorTextEntry = speciesJSON.flavor_text_entries.find(entry => entry.language.name === "en")
+          const flavorText = flavorTextEntry ? flavorTextEntry.flavor_text : "No description available."
+          const cleanedFlavorText = flavorText.replace(/\s+/g, ' ');
+          // Adding flavor text to Pokemon object
+          pokemonJSON.flavor_text = cleanedFlavorText
+
           return pokemonJSON
         }
       )
