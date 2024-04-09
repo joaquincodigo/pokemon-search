@@ -31,47 +31,38 @@ form {
 	width: 135px;
 	margin-right: 15px;
 	height: 30px;
-	padding: 0px;
+	padding: 10px;
+	box-sizing: border-box;
 	margin: 0px;
 	border: 0px;
 	border-radius: 5px;
-}
-
-input[type="text"]::placeholder {
-	padding-left: 8px;
-	color: lightgray;
 }
 
 /* ------------------------- */
 
 
 /* Type Input -------------- */
-.type-input-container {
-	width: 110px;
-	height: 30px;
+#type-select {
+	color: gray;
+	width: 100px;
 	display: inline-block;
-}
-
-#type-input {
-	display: inline-block;
-	width: 110px;
+	width: 135px;
+	margin-right: 15px;
 	height: 30px;
 	padding: 0px;
 	margin: 0px;
 	border: 0px;
 	border-radius: 5px;
+	padding: 7px 0px 10px 10px;
+	box-sizing: border-box;
 }
 
-.type-input-image-container {
-	width: 30px;
-	height: 30px;
-	display: inline-block;
+#default-option {
+	color: gray;
 }
 
-.type-input-image {
-	width: 30px;
-	height: 30px;
-	display: inline-block;
+option {
+	color: black;
 }
 
 /* ------------------------- */

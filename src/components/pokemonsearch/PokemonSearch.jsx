@@ -7,15 +7,16 @@ import SearchBar from '../searchbar/SearchBar';
 import './pokemonSearch.css';
 
 function PokemonSearch() {
-
+  // State
   const [entirePokemonList, setEntirePokemonList] = useState([])
   const [searchResults, setSearchResults] = useState([])
   const [selectedPokemon, setSelectedPokemon] = useState()
+  const [selectedType, setSelectedType] = useState()
 
+  // Handlers
   const handleNameInputChange = (event) => {
     const inputValue = event.target.value.toLowerCase()
     const inputLenght = inputValue.length
-    console.log(inputValue)
     if (inputValue) {
       const filteredPokemonListByName = entirePokemonList.filter((pokemon) => {
         return (pokemon.name.toLowerCase().slice(0, inputLenght) == inputValue)
@@ -33,7 +34,20 @@ function PokemonSearch() {
     setSelectedPokemon({ ...result });
   }
 
+  const handleTypeChange = (event) => {
+    const selectedType = event.target.value.toLowerCase();
+    setSearchResults(entirePokemonList.filter(
+      (pokemon) => {
+        for (const typeObject of pokemon.types) {
+          for (const type of object.type) {
 
+          }
+        }
+      }
+    ))
+  }
+
+  // Fetching
   useEffect(() => {
     // Top level fetch
     async function fetchPokemonData() {
@@ -60,6 +74,7 @@ function PokemonSearch() {
           const flavorTextEntry = speciesJSON.flavor_text_entries.find(entry => entry.language.name === "en")
           const flavorText = flavorTextEntry ? flavorTextEntry.flavor_text : "No description available."
           const cleanedFlavorText = flavorText.replace(/\s+/g, ' ');
+
           // Adding flavor text to Pokemon object
           pokemonJSON.flavor_text = cleanedFlavorText
 
@@ -71,7 +86,6 @@ function PokemonSearch() {
       const pokemonData = await Promise.all(pokemonDataPromises)
       setEntirePokemonList(pokemonData)
       setSearchResults(pokemonData)
-      console.log("SearchResults fetched:", pokemonData[0])
       setSelectedPokemon(pokemonData[0])
 
     }
@@ -87,7 +101,7 @@ function PokemonSearch() {
       </div>
 
       <div className="search-container">
-        <SearchBar onNameInputChange={handleNameInputChange} />
+        <SearchBar onNameInputChange={handleNameInputChange} onTypeSelectionChange={handleTypeChange} />
         <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
       </div>
 

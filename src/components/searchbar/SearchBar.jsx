@@ -2,23 +2,35 @@ import React from 'react';
 import './searchBar.css';
 import dummyImage from '../../images/dummy-image.png'
 
-function SearchBar({ onNameInputChange }) {
+function SearchBar({ onNameInputChange, onTypeSelectionChange }) {
 	return (
 		<div className="search-bar">
 			<form action="">
 
 				<div className="name-input-container">
-					<input onInput={onNameInputChange} type="text" name="name" id="name-input" placeholder='Name' />
+					<input onInput={onNameInputChange} type="text" name="name" id="name-input" placeholder='Sarch by name' />
 				</div>
 
 				<div className="type-input-container">
-					<input type="text" name="type" id="type-input" placeholder='Type Symbol' />
+					<select name="type-select" id="type-select" value="" onChange={onTypeSelectionChange}>
+						<option class="option-type" value="" disabled id="default-option">Select a type</option>
+						<option class="option-type" value="Bug">Bug</option>
+						<option class="option-type" value="Dragon">Dragon</option>
+						<option class="option-type" value="Electric">Electric</option>
+						<option class="option-type" value="Fighting">Fighting</option>
+						<option class="option-type" value="Fire">Fire</option>
+						<option class="option-type" value="Flying">Flying</option>
+						<option class="option-type" value="Ghost">Ghost</option>
+						<option class="option-type" value="Grass">Grass</option>
+						<option class="option-type" value="Ground">Ground</option>
+						<option class="option-type" value="Ice">Ice</option>
+						<option class="option-type" value="Normal">Normal</option>
+						<option class="option-type" value="Poison">Poison</option>
+						<option class="option-type" value="Psychic">Psychic</option>
+						<option class="option-type" value="Rock">Rock</option>
+						<option class="option-type" value="Water">Water</option>
+					</select>
 				</div>
-
-				<div className="type-input-image-container">
-					<img className="type-input-image" src={dummyImage} id="type-image" />
-				</div>
-
 			</form >
 		</div>
 	);
