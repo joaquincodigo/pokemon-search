@@ -35,16 +35,13 @@ function PokemonSearch() {
   }
 
   const handleTypeChange = (event) => {
-    const selectedType = event.target.value.toLowerCase();
-    setSearchResults(entirePokemonList.filter(
-      (pokemon) => {
-        for (const typeObject of pokemon.types) {
-          for (const type of object.type) {
-
-          }
-        }
-      }
-    ))
+    const selectedType = event.target.value.toLowerCase()
+    const filteredList = entirePokemonList.filter((pokemon) => {
+      return pokemon.types.some((typeObject) => {
+        return typeObject.type.name.toLowerCase() === selectedType;
+      });
+    });
+    setSearchResults(filteredList);
   }
 
   // Fetching
