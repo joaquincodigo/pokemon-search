@@ -5,9 +5,14 @@ import dummyImage from '../../images/dummy-image.png'
 function Card({ selectedPokemon }) {
 	if (selectedPokemon) {
 		return (
+
 			<div className="card">
-				<p className="card-title">{selectedPokemon.name}</p>
-				<img className="card-image" src={selectedPokemon.sprites.front_default} />
+				<div className="card-title-container">
+					<p className="card-title">{selectedPokemon.name}</p>
+				</div>
+				<div className="card-image-container">
+					<img className="card-image" src={selectedPokemon.sprites.front_default} />
+				</div>
 				<p className="card-description">{selectedPokemon.flavor_text}</p>
 			</div >
 		);
@@ -15,8 +20,12 @@ function Card({ selectedPokemon }) {
 	else {
 		return (
 			<div className="card">
-				<p className="card-title">Loading...</p>
-				<img className="card-image" alt="Loading..." />
+				<div className="card-title-container">
+					<p className="card-title">Loading...</p>
+				</div>
+				<div className="card-image-container">
+					<img className="card-image" alt="Loading..." />
+				</div>
 				<p className="card-description">Loading...</p>
 			</div >
 		);

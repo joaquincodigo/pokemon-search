@@ -1,0 +1,29 @@
+----------------------------------------------
+TODO
+----------------------------------------------
+- Corregir lógica de busqueda. Se debe poder filtrar por nombre y por tipo a la vez combinándolos.
+- Corregir que el dropdown <select> muestre y mantenga el tipo seleccionado.
+- CSS:
+  - Borde rojo
+
+	Barra de búsqueda:
+		- Íconos de tipos 
+
+  Resultados de búsqueda:
+		- Borde de resultado 
+		- Fondo de resultado
+		- Efecto Hover sobre resultado
+		- Glare sobre resultado
+		- Scroll de resultados
+		
+  Carta:
+    - Fondo de descripción de Pokemon
+    - Borde gris de imagen de carta
+		- Scroll de descripción
+		- Fondo de imagen
+
+
+
+----------------------------------------------
+DONE
+----------------------------------------------
