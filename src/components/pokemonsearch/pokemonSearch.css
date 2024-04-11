@@ -1,5 +1,10 @@
-* {
-	font-family: sans-serif;
+@font-face {
+	font-family: PokemonGameboy;
+	src: url('../../../public/fonts/PokemonGameboy.ttf') format('truetype'),
+}
+
+body {
+	font-family: 'PokemonGameboy', sans-serif;
 }
 
 .container {
