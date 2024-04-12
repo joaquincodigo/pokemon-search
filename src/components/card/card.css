@@ -1,5 +1,4 @@
 .card {
-	/* background-color: palevioletred; */
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -82,34 +81,39 @@
 
 
 .card-description {
+	background-color: #1a4e1c;
 	margin-top: 5px;
 	margin-bottom: 0px;
 	position: relative;
 	display: inline-block;
-	overflow: scroll;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	overflow: hidden;
 	height: 130px;
 	box-sizing: border-box;
 	padding: 5px;
-	font-size: 12px;
+	font-size: 10px;
 	color: white;
-	border-radius: 10px;
+	border-radius: 5px;
+	line-height: 14px;
+	z-index: 1;
+	outline: 3px solid black;
+	outline-offset: -3x;
+	box-sizing: border-box;
+	box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3);
 }
 
 .card-description::before {
-	background-color: #1a4e1c;
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
-	background-size: 100% 4px;
+	background-size: 100% 3px;
 	z-index: ;
 	width: 100%;
 	height: 141px;
-	z-index: -1;
+	z-index: 2;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .card-description::-webkit-scrollbar {

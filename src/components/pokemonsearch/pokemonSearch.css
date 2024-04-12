@@ -24,7 +24,7 @@ body {
 	height: 400px;
 	justify-content: center;
 	align-items: center;
-	background-color: red;
+	background-color: #e41a1a;
 	box-sizing: border-box;
 	padding: 15px;
 }
@@ -34,7 +34,7 @@ body {
 	flex-direction: column;
 	width: 350px;
 	height: 400px;
-	background-color: blue;
+	background-color: #e41a1a;
 	box-sizing: border-box;
 	padding: 15px;
 }

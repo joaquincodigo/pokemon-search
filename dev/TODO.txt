@@ -14,12 +14,13 @@ TODO
 		- Fondo de resultado
 		- Efecto Hover sobre resultado
 		- Glare sobre resultado
-		- Scroll de resultados
+		- Scroll de resultados estilo y cantidad de lineas scrolleadas
 		
   Carta:
     - Fondo de descripción de Pokemon
-		- Scroll de descripción
+		- Scroll de descripción estilo y bordes redondeados
 		- Fondo de imagen
+		- Efecto scanlines en imagen del pokemon
 
 
 
