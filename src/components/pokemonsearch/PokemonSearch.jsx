@@ -48,7 +48,7 @@ function PokemonSearch() {
   useEffect(() => {
     // Top level fetch
     async function fetchPokemonData() {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=50"
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=151"
       const res = await fetch(url)
       const JSONData = await res.json()
 
