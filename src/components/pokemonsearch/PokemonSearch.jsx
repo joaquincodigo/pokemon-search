@@ -12,37 +12,46 @@ function PokemonSearch() {
   const [searchResults, setSearchResults] = useState([])
   const [selectedPokemon, setSelectedPokemon] = useState()
   const [selectedType, setSelectedType] = useState()
+  const [nameFilter, setNameFilter] = useState('');
+  const [typeFilter, setTypeFilter] = useState('');
 
-  // Handlers
   const handleNameInputChange = (event) => {
-    const inputValue = event.target.value.toLowerCase()
-    const inputLenght = inputValue.length
-    if (inputValue) {
-      const filteredPokemonListByName = entirePokemonList.filter((pokemon) => {
-        return (pokemon.name.toLowerCase().slice(0, inputLenght) == inputValue)
-      })
-      setSearchResults(filteredPokemonListByName)
-    }
+    const inputValue = event.target.value.toLowerCase();
+    setNameFilter(inputValue);
+    filterPokemonList(inputValue, typeFilter);
+  };
 
-    else {
-      setSearchResults(entirePokemonList)
+  const handleTypeChange = (event) => {
+    const selectedType = event.target.value.toLowerCase();
+    if (selectedType === 'none') {
+      setTypeFilter('');
+    } else {
+      setTypeFilter(selectedType);
     }
+    filterPokemonList(nameFilter, selectedType === 'none' ? '' : selectedType);
+  };
 
-  }
+
+  const filterPokemonList = (nameFilter, typeFilter) => {
+    const filteredList = entirePokemonList.filter((pokemon) => {
+      const nameMatch = pokemon.name.toLowerCase().includes(nameFilter);
+      const typeMatch =
+        typeFilter === '' ||
+        pokemon.types.some((typeObject) => typeObject.type.name.toLowerCase() === typeFilter);
+      return nameMatch && typeMatch;
+    });
+    setSearchResults(filteredList);
+  };
+
+
+
+
 
   const handleMouseEnter = (event, result) => {
     setSelectedPokemon({ ...result });
   }
 
-  const handleTypeChange = (event) => {
-    const selectedType = event.target.value.toLowerCase()
-    const filteredList = entirePokemonList.filter((pokemon) => {
-      return pokemon.types.some((typeObject) => {
-        return typeObject.type.name.toLowerCase() === selectedType;
-      });
-    });
-    setSearchResults(filteredList);
-  }
+
 
   // Fetching
   useEffect(() => {
