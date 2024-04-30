@@ -1,28 +1,34 @@
 .resultsList {
 	height: 609px;
-	background-color: darkcyan;
+	background-color: rgb(0, 0, 0, 0.4);
 	padding: 15px;
 	box-sizing: border-box;
 	overflow: scroll;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	overscroll-behavior-y: none;
+	scroll-padding-top: 100px;
 }
 
 .resultsList::-webkit-scrollbar {
-	width: 15px;
+	width: 10px;
 }
 
 .resultsList::-webkit-scrollbar-track {
 	background: #f1f1f1;
+	border-radius: 10px;
 }
 
 .resultsList::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #323232;
+	border-radius: 10px;
 }
 
 ul {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
-	background-color: darkseagreen;
+	/* background-color: darkseagreen; */
 }

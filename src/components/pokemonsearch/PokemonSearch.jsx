@@ -34,7 +34,7 @@ function PokemonSearch() {
 
   const filterPokemonList = (nameFilter, typeFilter) => {
     const filteredList = entirePokemonList.filter((pokemon) => {
-      const nameMatch = pokemon.name.toLowerCase().includes(nameFilter);
+      const nameMatch = pokemon.name.toLowerCase().startsWith(nameFilter);
       const typeMatch =
         typeFilter === '' ||
         pokemon.types.some((typeObject) => typeObject.type.name.toLowerCase() === typeFilter);
