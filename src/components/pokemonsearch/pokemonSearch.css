@@ -5,6 +5,15 @@
 
 body {
 	font-family: 'PokemonGameboy', sans-serif;
+	background-image: url('../../../public/images/beach-background.png');
+	/* -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover; */
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-size: cover;
 }
 
 .container {
