@@ -100,7 +100,6 @@
 	outline: 2px solid black;
 	outline-offset: -2x;
 	box-sizing: border-box;
-	/* box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3); */
 }
 
 .card-description::before {
@@ -115,7 +114,6 @@
 	width: 100%;
 	height: 141px;
 	z-index: 2;
-	/* box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9); */
 }
 
 .card-description::-webkit-scrollbar {

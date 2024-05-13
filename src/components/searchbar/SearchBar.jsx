@@ -14,7 +14,7 @@ function SearchBar({ onNameInputChange, onTypeSelectionChange }) {
 				<div className="type-input-container">
 					<select name="type-select" id="type-select" onChange={onTypeSelectionChange}>
 						<option class="option-type" value="none" disabled id="default-option" >Select a type</option>
-						<option class="option-type" value="none">None</option>
+						<option class="option-type" id="any" value="none">Any</option>
 						<option class="option-type" value="Bug">Bug</option>
 						<option class="option-type" value="Dragon">Dragon</option>
 						<option class="option-type" value="Electric">Electric</option>

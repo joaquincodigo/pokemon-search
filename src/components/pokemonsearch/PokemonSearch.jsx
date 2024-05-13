@@ -31,7 +31,6 @@ function PokemonSearch() {
     filterPokemonList(nameFilter, selectedType === 'none' ? '' : selectedType);
   };
 
-
   const filterPokemonList = (nameFilter, typeFilter) => {
     const filteredList = entirePokemonList.filter((pokemon) => {
       const nameMatch = pokemon.name.toLowerCase().startsWith(nameFilter);
@@ -100,15 +99,18 @@ function PokemonSearch() {
   }, [])
 
   return (
-    <div className="container">
+    <div className="background">
+      <div className="container">
 
-      <div className="card-container">
-        <Card selectedPokemon={selectedPokemon} />
-      </div>
+        <div className="card-container">
+          <Card selectedPokemon={selectedPokemon} />
+        </div>
 
-      <div className="search-container">
-        <SearchBar onNameInputChange={handleNameInputChange} onTypeSelectionChange={handleTypeChange} />
-        <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
+        <div className="search-container">
+          <SearchBar onNameInputChange={handleNameInputChange} onTypeSelectionChange={handleTypeChange} />
+          <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
+        </div>
+
       </div>
 
     </div>
