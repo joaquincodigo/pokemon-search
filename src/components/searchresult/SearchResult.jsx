@@ -1,5 +1,4 @@
 import React from 'react'
-import dummyImage from '../../images/dummy-image.png'
 import "./searchresult.css"
 
 function SearchResult({ result, handleMouseEnter }) {
@@ -18,7 +17,7 @@ function SearchResult({ result, handleMouseEnter }) {
 							(type) => {
 								return (
 									<div>
-										<p className='result-type'>{type.type.name}</p>
+										<p className={`result-type ${type.type.name}`}>{type.type.name}</p>
 									</div>
 								)
 							}
