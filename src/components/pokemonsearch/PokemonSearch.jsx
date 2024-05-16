@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../card/Card';
 import ResultsList from '../resultlist/ResultsList';
 import SearchBar from '../searchbar/SearchBar';
+import LoadingAnimation from '../loadinganimation/LoadingAnimation';
 
 import './pokemonSearch.css';
 
@@ -14,6 +15,7 @@ function PokemonSearch() {
   const [selectedType, setSelectedType] = useState()
   const [nameFilter, setNameFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
+  const [isLoading, setIsLoading] = useState(true)
 
   const handleNameInputChange = (event) => {
     const inputValue = event.target.value.toLowerCase();
@@ -92,7 +94,7 @@ function PokemonSearch() {
       setEntirePokemonList(pokemonData)
       setSearchResults(pokemonData)
       setSelectedPokemon(pokemonData[0])
-
+      setIsLoading(false)
     }
 
     fetchPokemonData()
@@ -100,18 +102,26 @@ function PokemonSearch() {
 
   return (
     <div className="background">
-      <div className="container">
+      {
+        isLoading ?
+          (<LoadingAnimation />)
+          :
+          (
+            <div className="container">
 
-        <div className="card-container">
-          <Card selectedPokemon={selectedPokemon} />
-        </div>
+              <div className="card-container">
+                <Card selectedPokemon={selectedPokemon} />
+              </div>
 
-        <div className="search-container">
-          <SearchBar onNameInputChange={handleNameInputChange} onTypeSelectionChange={handleTypeChange} />
-          <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
-        </div>
+              <div className="search-container">
+                <SearchBar onNameInputChange={handleNameInputChange} onTypeSelectionChange={handleTypeChange} />
+                <ResultsList results={searchResults} handleMouseEnter={handleMouseEnter} />
+              </div>
 
-      </div>
+            </div>
+          )
+      }
+
 
     </div>
   );

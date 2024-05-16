@@ -76,7 +76,7 @@
 
 .card-image {
 	border-radius: 5px;
-	width: 170px;
+	width: 180px;
 	position: absolute;
 	z-index: 3;
 	overflow: hidden;
