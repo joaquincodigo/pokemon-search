@@ -20,7 +20,7 @@
 
 .result-image {
 	/* background-color: purple; */
-	margin-left: 5px;
+	margin-left: 10px;
 	margin-bottom: 5px;
 }
 
@@ -29,7 +29,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top: 8px;
+	padding-top: 11px;
 }
 
 .result-name {
@@ -39,6 +39,7 @@
 	margin: 0px;
 	text-transform: capitalize;
 	padding-left: 10px;
+	text-shadow: 0 0 2px white;
 }
 
 .types-container {
