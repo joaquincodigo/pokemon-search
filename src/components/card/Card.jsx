@@ -26,7 +26,7 @@ function Card({ selectedPokemon }) {
 				<div className="card-image-container">
 					<img className="card-image" alt="Loading..." />
 				</div>
-				<p className="card-description">Loading...</p>
+				<p className="card-description typing">Loading...</p>
 			</div >
 		);
 	}
