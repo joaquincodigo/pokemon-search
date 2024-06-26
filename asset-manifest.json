@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/pokemon-search/static/css/main.eb957b5f.css",
+    "main.js": "/pokemon-search/static/js/main.2cfe1d31.js",
+    "static/media/dummy-image.png": "/pokemon-search/static/media/dummy-image.961a737abc93a29558b0.png",
+    "static/media/bg2.png": "/pokemon-search/static/media/bg2.178fe5e6692ae7ac8b08.png",
+    "static/media/pokeballs-background.png": "/pokemon-search/static/media/pokeballs-background.6a4483f78e38c8364d26.png",
+    "static/media/beach-background.png": "/pokemon-search/static/media/beach-background.dab8b728ac57399882d8.png",
+    "static/media/PokemonGameboy.ttf": "/pokemon-search/static/media/PokemonGameboy.6211ee48ea626f34681e.ttf",
+    "index.html": "/pokemon-search/index.html",
+    "main.eb957b5f.css.map": "/pokemon-search/static/css/main.eb957b5f.css.map",
+    "main.2cfe1d31.js.map": "/pokemon-search/static/js/main.2cfe1d31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb957b5f.css",
+    "static/js/main.2cfe1d31.js"
+  ]
+}
